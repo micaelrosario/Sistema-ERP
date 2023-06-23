@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerador de Relatórios</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: rgb(255, 255, 255);
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            .imprimir{
+                color: rgb(0, 0, 0);
+                background-color: rgb(179, 171, 171);
+                border-color: rgb(0, 0, 0);
+            }
+            
+        </style>
+    </head>
+    <body class="m-4">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success"><h2>Gerador de Relatório</h2></a>
+                <form class="d-flex" role="search">
+                    <button class="btn cancelar subtitle btn-default m-2" type="submit"><a href="home.html" style="text-decoration: none; color: green">Sair</a></button>
+                    <button class="btn salvar subtitle btn-success  btn-block m-2" type="submit"><a href="sucesso.html" style="text-decoration: none; color: white;">Salvar</a></button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark ">
+                    <form>
+                        <div class="m-4">
+                            <div class="row">
+                                <!--1° LINHA-->
+                                <div class="col-3">
+                                    <h6></h6>
+                                    <!--Código-->
+                                    <h4>Tabelas e Campos</h4>
+                                    <div class="list-group overflow-auto" style="max-height: 300px;">
+                                        <a href="#" class="list-group-item list-group-item-action bg-body-tertiary">Anexo</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Banco</a>
+                                        <a href="#" class="list-group-item list-group-item-action bg-body-tertiary">Caixa</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Cargo</a>
+                                        <a href="#" class="list-group-item list-group-item-action bg-body-tertiary">Cheque</a>
+                                        <a href="#" class="list-group-item list-group-item-action bg-primary">Cliente</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Compra</a>
+                                        <!-- Adicione mais itens aqui -->
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-3">
+                                    <h6></h6>
+                                    <!--Código-->
+                                    <h4>Campos disponiveis</h4>
+                                    <div class="" style="max-height: 300px;">
+                                        <input type="text" style="width: 250px; height: 300px; opacity: 50%; ;">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <!--1° LINHA-->
+                                    <div class="row subtitle">
+                                        <h6></h6>
+                                        <!--Código-->
+                                        <h4>Filtro</h4>
+                                        <div class="col-md"><br>
+                                            <div class="row">
+                                                <div class="col-2 pt-1">
+                                                    <label for="inputcode" class="form-label">Datas</label>
+                                                </div>
+                                                <div class="col-5">
+                                                    <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control" id="inputcode" placeholder="14/07/2023">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="row">
+                                        <!--Razão Social-->
+                                        <div class="col-md"><br>
+                                            <div class="row">
+                                                <div class="col-3 pt-1 mx-2">
+                                                    <label for="inputcode" class="form-label">Período</label>
+                                                </div>
+                                                <div class="col-">
+                                                    <select id="inputState" class="form-select " >
+                                                        <option value="Nenhum">De um período</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Razão Social-->
+                                        <div class="col-md text-center"><br>
+                                            <button class="btn salvar subtitle btn-success border-2 border-dark m-2" type="submit">VISUALIZAR</button><br>
+                                            <button class="btn imprimir subtitle  m-2" style="width: 130px;" type="submit">IMPRIMIR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--Plano de Contas-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark">
+                    <form>
+                        <div class="m-2">
+                            <div class="row">
+                                <h6></h6>
+                                <!--CRT - Código de Regime Tributário-->
+                                <h3>Relatórios Gerados</h3>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--=====================TABELA===================-->
+            <div class="container-fluid table-responsive flex border border-1 bg-body-secondary">
+                <table class="table table-bordered bg-body-tertiary" >
+                    <thead>
+                        <tr class="table-secondary">
+                            <th scope="col">ID</th>
+                            <th scope="col">Título do Relatório</th>
+                            <th scope="col">Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            <th scope="row">4</th>
+                            <td>Bancos</td>
+                            <td>14/06/2023</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <th scope="row">3</th>
+                            <td>Clientes</td>
+                            <td>14/06/2023</td>
+                            
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">5</th>
+                            <td>Compras</td>
+                            <td>14/06/2023</td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">6</th>
+                            <td>Compras X Fornecedor X Produtos X Unidade</td>
+                            <td>14/06/2023</td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">8</th>
+                            <td>Fechamento_Caixa</td>
+                            <td>14/06/2023</td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">9</th>
+                            <td>Movimentação de Estoque Completa</td>
+                            <td>14/06/2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emissão de Nota Fiscal</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            .branco::placeholder{
+                color:white;
+            }
+            .amarelo::placeholder{
+                color:yellow;
+            }
+            .azul{
+                color: rgb(2, 69, 168);
+            }
+        </style>
+    </head>
+    <body class="m-4 subtitle">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra ">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success mx-4"><h2>Emissão de Nota Fiscal</h2></a>
+                <form class="d-flex" role="search">
+                    <button class="btn cancelar subtitle btn-default m-2" type="submit"><a href="home.html" style="text-decoration: none; color: green">Cancelar</a></button>
+                    <button class="btn salvar subtitle btn-success  btn-block m-2" type="submit"><a href="sucesso.html" style="text-decoration: none; color: white;">Cadastrar</a></button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="conteiner container-fluid border border-1">
+                <table class="table table-dark">
+                    <form>
+                        <div class="p-4">
+                                <!--1° LINHA-->
+                            <div class="row subtitle">
+                                <h6></h6>
+                                <!--Código-->
+                                <h4 class="azul"><b>Dados da Nota Fiscal</b></h4>
+                                <div class="col-md-1"><br>
+                                    <label for="inputcode" class="form-label">Id NF</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="15">
+                                </div>
+                                <div class="col-md"><br>
+                                    <label for="inputcode" class="form-label">Pedido de venda</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="52">
+                                </div>
+                                <div class="col-md-2"><br>
+                                    <label for="inputcode" class="form-label">Data Emissão</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                </div>
+                                <div class="col-md"><br>
+                                    <label for="inputcode" class="form-label">Data de Saída</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="15">
+                                </div>
+                                <div class="col-md-1"><br>
+                                    <label for="inputcode" class="form-label">Hora</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="19:00">
+                                </div>
+                                <div class="col-md-2"><br>
+                                    <label for="inputcode" class="form-label">Orçamento</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="">
+                                </div>
+                                <div class="col-md-1"><br>
+                                    <label for="inputcode" class="form-label">O.S.</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="">
+                                </div>
+                                <div class="col-md"><br>
+                                    <label for="inputcode" class="form-label">Insc.Est.Subs.Trib</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="">
+                                </div>
+                            </div>
+                                <br>
+                                <!--2° LINHA-->
+                                <div class="row subtitle">
+                                    <div class="col-md"> 
+                                        <label for="inputCor" class="form-label">Tipo da Nota Fiscal</label>
+                                        <div class="row py-1">
+                                            <div class="col- ">
+                                                <label for="pessoaFísica">
+                                                    <input type="radio" id="pessoaFisica" name="tipoPessoa" value="fisica" checked> Saída
+                                                </label>
+                                            </div>
+                                            <div class="col-">
+                                                <label for="pessoaJuridica">
+                                                    <input type="radio" id="pessoaJuridica" name="tipoPessoa" value="juridica"> Entrada
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Nome Fantasia-->
+                                    <div class="col-md ">
+                                        <label for="inputOriginal" class="form-label">Condições de Pagamento</label>
+                                        <select id="inputState" class="form-select " >
+                                            <option value="AC">A VISTA</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="inputcode" class="form-label">CFOP</label>
+                                        <select id="inputState" class="form-select " >
+                                            <option value="AC">5.102</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="inputcstcofins" class="form-label">Natureza da Operação</label>
+                                        <input type="text" class="form-control italico text-danger" id="imputcstcofins" placeholder="VENDA COMERCIAL">
+                                    </div>
+                                </div><br>
+                                <!--3° LINHA-->
+                                <div class="row subtitle">
+                                     <!---TIPO DE PESSOA-->
+                                    <div class="col-md"> 
+                                        <label for="inputCor" class="form-label">Condições de entrega</label>
+                                        <div class="col">
+                                            <label for="pessoaFísica">
+                                                <input type="radio" id="pessoaFisica" name="tipoPessoa" value="fisica" checked> A retirar
+                                            </label><br>
+                                            <label for="pessoaJuridica">
+                                                <input type="radio" id="pessoaJuridica" name="tipoPessoa" value="juridica"> Entrega s/acréscimo
+                                            </label><br>
+                                            <label for="pessoaJuridica">
+                                                <input type="radio" id="pessoaJuridica" name="tipoPessoa" value="juridica"> Entrega c/frete
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!--CNAE-->
+                                    <div class="col-md">
+                                        <label for="inputcstcofins" class="form-label">Nota Fiscal</label>
+                                        <input type="text" class="form-control italico text-danger" id="imputcstcofins" placeholder="17">
+                                    </div>
+                                    <!--CNAE-->
+                                    <div class="col-md">
+                                        <label for="inputcstcofins" class="form-label">Série</label>
+                                        <input type="text" class="form-control italico text-danger" id="imputcstcofins" placeholder="1">
+                                    </div>
+                                    <!--CNAE-->
+                                    <div class="col-md">
+                                        <label for="inputcstcofins" class="form-label">Status da Nota Fiscal</label>
+                                        <input type="text" class="form-control italico text-danger" id="imputcstcofins" placeholder="AGUARDANDO ENTREGA ">
+                                    </div>
+                                </div>
+                            </div><br>
+                            
+                            <hr>
+                                <!--4° LINHA-->
+                            <div class="row subtitle py-2 mx-2">
+                                <h4 class="azul"><b>Dados do Cliente/Destinatário</b></h4>
+                                <!--Endereço-->
+                                <div class="col-md"><br>
+                                    <label for="inputcstpis" class="form-label">Código do Destinatário</label>
+                                    <input type="text" class="form-control italico" id="imputcstpis" placeholder="00010">
+                                </div>
+                                <!--Complemento-->
+                                <div class="col-md"><br>
+                                    <label for="inputcstcofins" class="form-label">Razão Social/Nome do Cliente</label>
+                                    <input type="text" class="form-control italico" id="imputcstcofins" placeholder="Jhon Silva">
+                                </div>
+                                <!--Site-->
+                                <div class="col-md"><br>
+                                    <label for="inputipi" class="form-label">Vendedor</label>
+                                    <select id="inputState" class="form-select " >
+                                        <option value="AC">ADMINISTRADOR</option>
+                                    </select>
+                                </div>
+                                <!--Site-->
+                                <div class="col-md"><br>
+                                    <label for="inputipi" class="form-label">Tabela de Preços</label>
+                                    <select id="inputState" class="form-select " >
+                                        <option value="AC"></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--TRIBUTOS E IMPOSTOS-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark">
+                    <form>
+                        <div class="m-4">
+                            <div>
+                                <h4 class="azul"><b>Dados dos Produtos</b></h4><br>
+                                <div class="row">
+                                    <h6></h6>
+                                    <!--CRT - Código de Regime Tributário-->
+                                    <div class="col-md">
+                                        <label for="inputcode" class="form-label">Código do Produto</label>
+                                        <input type="text" class="form-control" id="inputcode" placeholder="">
+                                    </div>
+                                    <!--IRPJ(%)-->
+                                    <div class="col-md">
+                                        <label for="inputAbreviada" class="form-label">Descrição do produto</label>
+                                        <input type="text" class="form-control " id="inputAbreviada" placeholder="">
+                                    </div>
+                                    <!--PIS/PASEP-->
+                                    <div class="col-md py-4">
+                                        <label for="inputOriginal" class="form-label">Unid.</label>
+                                        <input type="text" class="form-control " id="inputNatureza" placeholder="">
+                                    </div>
+                                    <!---CSLL (%)-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputCor" class="form-label">Qtde.Estoque</label>
+                                        <input type="text" class="form-control" id="imputicms" placeholder="">
+                                    </div>
+                                    <!--COFINS(%)-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputproduct" class="form-label">Quantidade</label>
+
+                                        <input type="text" class="form-control" id="imputicms" placeholder="">
+                                    </div>
+                                    <!--INSS(%)-->
+                                    <div class="col-md"><br>
+                                        <label for="inputicms" class="form-label">Preço Unitário</label>
+                                        <input type="text" class="form-control" id="imputicms" placeholder="">
+                                    </div>
+                                    <!---CPF/CNPJ-->
+                                    <div class="col-md py-4"> 
+                                        <label for="inputCor" class="form-label">Tipo de Desconto</label>
+                                        <div class="row">
+                                            <div class="col-md ">
+                                                <label for="pessoaFísica">
+                                                    <input type="radio" id="pessoaFisica" name="tipoPessoa" value="fisica"> $
+                                                </label>
+                                            </div>
+                                            <div class="col-md">
+                                                <label for="pessoaJuridica">
+                                                    <input type="radio" id="pessoaJuridica" name="tipoPessoa" value="juridica" checked> %
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--CSOSN-->
+                                    <div class="col-md px-md-"><br>
+                                        <label for="inputcstpis" class="form-label">Desconto</label>
+                                        <input type="text" class="form-control" id="imputcstpis" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">CSOSN</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">BC.ICMS</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">ICMS(%)</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">Créd.ICMS</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">CST IPI</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST IPI-->
+                                    <div class="col-md-1">
+                                        <label for="inputipi" class="form-label">IPI (%)</label>
+                                        <input type="text" class="form-control" id="imputipi">
+                                    </div>
+                                    <!--CST IPI-->
+                                    <div class="col-md-1">
+                                        <label for="inputipi" class="form-label">Vlr.IPI</label>
+                                        <input type="text" class="form-control" id="imputipi">
+                                    </div>
+                                    <!--CNPJ/CPF-->
+                                    <div class="col-md ">
+                                        <label for="inputcsosn" class="form-label">Vlr.ICMS</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md">
+                                        <label for="inputcstcofins" class="form-label">Vlr.ICMSST</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CNPJ/CPF-->
+                                    <div class="col-md ">
+                                        <label for="inputcsosn" class="form-label">BCICMSST</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">Vlr.ICMSTST</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">CST PIS</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">BC.PIS</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">PIS(%)</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1">
+                                        <label for="inputcstcofins" class="form-label">Vlr.PIS</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-2">
+                                        <label for="inputcstcofins" class="form-label">CST COFINS</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST IPI-->
+                                    <div class="col-md-1">
+                                        <label for="inputipi" class="form-label">BC.COFINS</label>
+                                        <input type="text" class="form-control" id="imputipi">
+                                    </div>
+                                    <!--CNPJ/CPF-->
+                                    <div class="col-md ">
+                                        <label for="inputcsosn" class="form-label">Vlr.COFINS</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md">
+                                        <label for="inputcstcofins" class="form-label">Peso (kg)</label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-2">
+                                        <label for="inputcstcofins" class="form-label azul"><b>Total do Ítem</b></label>
+                                        <input type="text" class="form-control" id="imputcstcofins" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--=====================TABELA===================-->
+            <div class="conteiner">
+                <table class="table table-bordered ">
+            
+                    <thead class="table table-bordered border-dark border-1">
+                        <tr class="bg-body-secondary ">
+                            <th scope="col">Código</th>
+                            <th scope="col">Descrição do Produto</th>
+                            <th scope="col">Unidade</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Preço Unitário</th>
+                            <th scope="col">ICMS (%)</th>
+                            <th scope="col">IPI (%)</th>
+                            <th scope="col">ICMSST (%)</th>
+                            <th scope="col">Tp.Desconto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-primary">
+                            <th scope="row">0000000000001</th>
+                            <td>MEMÓRIA 64GB DDR4</td>
+                            <td>PÇ</td>
+                            <td>3.000</td>
+                            <td>89,90</td>
+                            <td>0,00</td>
+                            <td>0,00</td>
+                            <td>0,00000000000</td>
+                            <td>%</td>
+                        </tr>
+                        <tr class="bg-light">
+                            <th scope="row">00002</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="">
+                            <th scope="row">00003</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-light">
+                            <th scope="row">00004</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Totais-->
+            <!--TRIBUTOS E IMPOSTOS-->
+            <div class="container-fluid border border-1 bg-body-tertiary">
+                <table class="table table-dark">
+                    <form>
+                        <div class="m-4">
+                            <div>
+                                <h4><b>Totais</b></h4>
+                                <div class="row subtitle">
+                                    <h6></h6>
+                                    <!--CRT - Código de Regime Tributário-->
+                                    <div class="col-md"><br>
+                                        <label for="inputcode" class="form-label">Ítens</label>
+                                        <input type="text" class="form-control branco bg-dark" id="inputcode" placeholder="5,000">
+                                    </div>
+                                     <!--CRT - Código de Regime Tributário-->
+                                     <div class="col-md"><br>
+                                        <label for="inputcode" class="form-label">Tot.Produtos</label>
+                                        <input type="text" class="form-control branco bg-dark" id="inputcode" placeholder="356,00">
+                                    </div>
+                                     <!--CRT - Código de Regime Tributário-->
+                                     <div class="col-md"><br>
+                                        <label for="inputcode" class="form-label">Tot.Serviços</label>
+                                        <input type="text" class="form-control branco bg-dark" id="inputcode" placeholder="0,00">
+                                    </div>
+                                    <!--IRPJ(%)-->
+                                    <div class="col-md"><br>
+                                        <label for="inputAbreviada" class="form-label">Sub-Total</label>
+                                        <input type="text" class="form-control branco bg-dark" id="inputAbreviada" placeholder="520,00">
+                                    </div>
+                                    <!--PIS/PASEP-->
+                                    <div class="col-md py-4">
+                                        <label for="inputOriginal" class="form-label">Crédito ICMS</label>
+                                        <input type="text" class="form-control sm amarelo bg-dark" id="inputNatureza" placeholder="0,00">
+                                    </div>
+                                    <!---CSLL (%)-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputCor" class="form-label">Valor Total IPI</label>
+                                        <input type="text" class="form-control amarelo bg-dark" id="imputicms" placeholder="0,00">
+                                    </div>
+                                    <!--CRT - Código de Regime Tributário-->
+                                    <div class="col-md"><br>
+                                        <label for="inputcode" class="form-label">Total ICMSST</label>
+                                        <input type="text" class="form-control amarelo bg-dark" id="inputcode" placeholder="0,00">
+                                    </div>
+                                    <!--IRPJ(%)-->
+                                    <div class="col-md"><br>
+                                        <label for="inputAbreviada" class="form-label">Desconto</label>
+                                        <input type="text" class="form-control amarelo bg-dark " id="inputAbreviada" placeholder=0,00">
+                                    </div>
+                                    <!--PIS/PASEP-->
+                                    <div class="col-md">
+                                        <label for="inputOriginal" class="form-label ">Total da Nota Fiscal</label>
+                                        <input type="text" class="form-control sm branco bg-dark" id="inputNatureza" placeholder="356,00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

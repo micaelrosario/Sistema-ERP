@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Orçamentos</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            .fundo{
+                background:rgb(37, 96, 46)
+            }
+
+        </style>
+    </head>
+    <body class="m-4">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success"><h2>Cadastro de Orçamento</h2></a>
+                <form class="d-flex" role="search">
+                    <button class="btn cancelar subtitle btn-default m-2" type="submit"><a href="home.html" style="text-decoration: none; color: green">Cancelar</a></button>
+                    <button class="btn salvar subtitle btn-success  btn-block m-2" type="submit"><a href="sucesso.html" style="text-decoration: none; color: white;">Cadastrar</a></button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="container-fluid border border-2 ">
+                <table class="table table-dark ">
+                    <form>
+                        <div>
+                            <!--BARRA DE OPÇÕES-->
+                            <div class="row pt-4 mx-3 ">
+                                <div class="col-1">
+                                    <label for="inputcode" class="form-label">N° ORÇ.</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="360">
+                                </div>
+                                <div class="col">
+                                    <label for="inputcode" class="form-label">DATA</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                </div>
+                                <div class="col">
+                                    <label for="inputcode" class="form-label">VÁLIDO ATÉ</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                </div>
+                                <div class="col">
+                                    <label for="inputcode" class="form-label">ENTREGA</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                </div>
+                                <div class="col">
+                                    <label for="inputcode" class="form-label">SUBTOTAL</label>
+                                    <input type="text" class="form-control text-end" id="inputcode" placeholder="0,00">
+                                </div>
+                                <div class="col-md">
+                                    <label for="inputcode" class="form-label">ACRES/DESC</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="0100">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputcode" class="form-label">CLIENTE</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="JHON SILVA">
+                                </div>
+                                <div class="col-md">
+                                    <label for="inputcode" class="form-label">STATUS</label>
+                                    <input type="text" class="form-control" id="inputcode" placeholder="ABERTO">
+                                </div>
+                            </div><br>
+                            <!--Buttons-->
+                            <div class="row ">
+                                <div class="container container-fluid border border-1 fundo">
+                                    <div class="col mx-5 p-2">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-success mx-1 border-4 border-danger rounded-2 text-">
+                                                <i class="bi bi-person-vcard"></i>
+                                                CLIENTE
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light mx-1  rounded-2 text-opacity-75 text-dark">
+                                                <i class="bi bi-person-vcard"></i>
+                                                PRODUTOS
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light mx-1 rounded-2 text-dark">
+                                                <i class="bi bi-person-vcard"></i>
+                                                SERVIÇOS
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light mx-1 rounded-2 text-dark">
+                                                <i class="bi bi-person-vcard"></i>
+                                                CONDIÇÕES PAGAMENTO
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light mx-1 rounded-2 text-dark">
+                                                <i class="bi bi-person-vcard"></i>
+                                                CONDIÇÕES GERAIS
+                                            </button>
+                                            <button type="button" class="btn btn-outline-light mx-1 rounded-2 text-dark">
+                                                <i class="bi bi-person-vcard"></i>
+                                                OBSERVAÇÕES INTERNAS
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Dados-->
+                            <div class="m-4">
+                                <!--1° LINHA-->
+                                <div class="row">
+                                    <div class="col-md-2"><br>
+                                        <label for="inputcode" class="form-label">Código</label>
+                                        <input type="text" class="form-control" id="inputcode" placeholder="0100">
+                                    </div>
+                                    <!--Nome-->
+                                    <div class="col-md-6"><br>
+                                        <label for="inputAbreviada" class="form-label">Nome</label>
+                                        <input type="text" class="form-control " id="inputAbreviada" placeholder="Jhon Silva">
+                                    </div>
+                                    <!--CPF-->
+                                    <div class="col-md-4"><br>
+                                        <label for="inputAbreviada" class="form-label">CPF</label>
+                                        <input type="text" class="form-control italico" id="inputAbreviada" placeholder="999.999.999-99">
+                                    </div>
+                                </div>
+                                <!--2° LINHA-->
+                                <div class="row">
+                                    <!--CST PIS-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputproduct" class="form-label">Endereço</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="R.Ver. Romeu Agrário - Tento">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-1"><br>
+                                        <label for="inputcsosn" class="form-label">Número</label>
+                                        <input type="text" class="form-control " id="imputicms" placeholder="16">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-4"><br>
+                                        <label for="inputcsosn" class="form-label">Bairro</label>
+                                        <input type="text" class="form-control italico" id="imputicms"  placeholder="Bairro do Tento">
+                                    </div>
+                                </div>
+                                <!--3° LINHA-->
+                                <div class="row">
+                                     <!--CST COFINS-->
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label">Complemento</label>
+                                        <input type="text" class="form-control italico" id="imputicms">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-2"><br>
+                                        <label for="inputcsosn" class="form-label">CEP</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="45400-000">
+                                    </div>
+                                    <div class="col-md-2 pt-4">
+                                        <label for="inputState" class="form-label">UF</label>
+                                        <select id="inputState" class="form-select">
+                                            <option select>Selecione</option>
+                                            <option value="" class="">Acre (AC)</option>
+                                            <option value="">Alagoas (AL)</option>
+                                            <option value="">Amazonas (AM)</option>
+                                            <option value="">Bahia (BA)</option>
+                                            <option value="">Ceará (CE)</option>
+                                            <option value="">Distrito Federal (DF)</option>
+                                            <option value="">Espírito Santo (ES)</option>
+                                            <option value="">Goiás (GO)</option>
+                                            <option value="">Maranhão (MA)</option>
+                                            <option value="">Mato Grosso (MT)</option>
+                                            <option value="">Mato Grosso do Sul (MS)</option>
+                                            <option value="">Minas Gerais (MG)</option>
+                                            <option value="">Pará (PA)</option>
+                                            <option value="">Rio de Janeiro (RJ)</option>
+                                            <option value="">Rondônia (RO)</option>
+                                            <option value="">Roraima (RR)</option>
+                                            <option value="">Santa Catarina (SC)</option>
+                                            <option value="">São Paulo (SP)</option>
+                                            <option value="">Sergipe (SE)</option>
+                                            <option value="">Tocantins (TO)</option>
+                                        </select>
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-3"><br>
+                                        <label for="inputcsosn" class="form-label">Cidade</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="Valença">
+                                    </div>
+                                </div>
+                                <!--4° LINHA-->
+                                <div class="row">
+                                    <!--CST PIS-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputproduct" class="form-label">Telefone</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="(73) 9999-9999">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label">Contato</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="Jhon Silva">
+                                    </div>
+                                    <!--CST COFINS-->
+                                    <div class="col-md-4"><br>
+                                        <label for="inputcsosn" class="form-label">Email</label>
+                                        <input type="text" class="form-control italico" id="imputicms"  placeholder="Jhon@tech_inovation.com.br">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table><br>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body><br><br>
+</html>

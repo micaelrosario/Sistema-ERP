@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Posição de Vendas</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            
+        </style>
+    </head>
+    <body class="m-4">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success mx-3"><h2>Posição de Vendas</h2></a>
+                <form class="d-flex" role="search">
+                    <div class="text-end">
+                        <a href="home.html">
+                            <button type="button" class="btn-close" style="font-size: 40px;" aria-label="Close"></button>
+                        </a>                              
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark ">
+                    <form>
+                        <div class="m-4">
+                            <div>
+                                <!--1° LINHA-->
+                                <div class="row subtitle">
+                                    <!--Código-->
+                                    <div class="col-md-3"><br>
+                                        <label for="inputcode" class="form-label ">Período</label>
+                                        <select id="inputState" class="form-select">
+                                            <option value="AC">24 Maio 2023/14 Junho 2023</option>
+                                        </select>
+                                    </div>
+                                    <!--Razão Social-->
+                                    <div class="col-md-3"><br>
+                                        <label for="inputAbreviada" class="form-label">Tipo</label>
+                                        <select id="inputState" class="form-select">
+                                            <option value="AC">Todos</option>
+                                        </select>
+                                    </div>
+                                    <!--UF-->
+                                    <div class="col-md-3"><br>
+                                        <label for="inputcsosn" class="form-label">Cliente</label>
+                                        <select id="inputState" class="form-select " >
+                                            <option value="AC">Todos</option>
+                                        </select>
+                                    </div>
+                                    <!--UF-->
+                                    <div class="col-md-3"><br>
+                                        <label for="inputcsosn" class="form-label">Pagamento</label>
+                                        <select id="inputState" class="form-select " >
+                                            <option value="AC">Todos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <!--2° LINHA-->
+                                <div class="row subtitle">
+                                    <div class="col">
+                                        <button class="btn btn-sm btn-success border border-1 border-black border-opacity-50 m-2" type="submit"><b>VISUALIZAR</b></button>
+                                        <button class="btn btn-sm btn-light border border-1 border-black border-opacity-50  m-2" type="submit"><b>IMPRIMIR</</b></button>
+                                    </div>
+                                </div><br>
+                                <div class="row subtitle">
+                                    <h6>17 resultados encontrados, Mostrando de 1 a 17</h6>
+                                    <h6></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--=====================TABELA===================-->
+            <div class="container-fluid table-responsive flex border border-1 bg-body-secondary">
+                <table class="table table-bordered bg-body-tertiary" >
+                    <thead>
+                        <tr class="table-secondary">
+                            <th scope="col">Pedido</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Vencimento</th>
+                            <th scope="col">Valor Parcela</th>
+                            <th scope="col">Pagamento</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            <th scope="row">119</th>
+                            <td>Jhon Silva</td>
+                            <td>Recebimento de Pedido de venda. Parcela 2 de 3</td>
+                            <td>14/06/2023</td>
+                            <td>R$ 6,67</td>
+                            <td>Dinheiro</td>
+                            <td><button class="btn btn-sm btn-light border border-1 border-black border-opacity-50 m-2" type="submit" disabled><b>RECEBER</</b></button></td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">120</th>
+                            <td>Camila Soares</td>
+                            <td>Recebimento de Pedido de venda. Parcela 2 de 3</td>
+                            <td>14/06/2023</td>
+                            <td>R$ 6,67</td>
+                            <td>Dinheiro</td>
+                            <td><button class="btn btn-sm btn-light border border-1 border-black m-2 " type="submit" disabled><b>RECEBER</</b></button></td>
+                       
+                        </tr>
+                        <tr class="table-primary">
+                            <th scope="row">121</th>
+                            <td>Alana Ribeiro</td>
+                            <td>Recebimento de Pedido de venda. Parcela 2 de 3</td>
+                            <td>14/06/2023</td>
+                            <td>R$ 6,67</td>
+                            <td>Crediário</td>
+                            <td><div class="m-2 opacity-50">Recebido</div></td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row">122</th>
+                            <td>Matheus Souza</td>
+                            <td>Recebimento de Pedido de venda. Parcela 2 de 3</td>
+                            <td>14/06/2023</td>
+                            <td>R$ 6,67</td>
+                            <td>Crediário</td>
+                            <td><button class="btn btn-sm btn-light border border-1 border-black  m-2" type="submit" disabled><b>RECEBER</</b></button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">122</th>
+                            <td>Pedro João</td>
+                            <td>Recebimento de Pedido de venda. Parcela 2 de 3</td>
+                            <td>14/06/2023</td>
+                            <td>R$ 6,67</td>
+                            <td>Cartão de Crédito</td>
+                            <td><button class="btn btn-sm btn-light border border-1 border-black border-opacity-50 m-2" type="submit" disabled><b>RECEBER</</b></button></td>
+                         </tr>
+                        <tr>
+                            <th scope="row">124</th>
+                            <td>Stephany Santana</td>
+                            <td>Recebimento de Pedido de venda. Parcela 2 de 3</td>
+                            <td>14/06/2023</td>
+                            <td>R$ 6,67</td>
+                            <td>Crédito Crédito</td>
+                            <td><button class="btn btn-sm btn-light border border-1 border-black border-opacity-50 m-2" type="submit" disabled><b>RECEBER</</b></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tela PDV</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            .branco::placeholder{
+                color:white;
+            }
+            .amarelo::placeholder{
+                color:yellow;
+            }
+        </style>
+    </head>
+    <body class="m-4 ">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success"><h2>Venda - PDV - Frente de Caixa</h2></a>
+                <form class="d-flex" role="search">
+                    <button class="btn cancelar subtitle btn-default m-2 px-3" type="submit"><a href="home.html" style="text-decoration: none; color: green">Sair</a></button>
+                    <button class="btn salvar subtitle btn-success  btn-block m-2" type="submit"><a href="sucesso.html" style="text-decoration: none; color: white;">Salvar</a></button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="container-fluid border border-1 bg-body-tertiar">
+                <table class="table table-dark ">
+                    <form>
+                        <div class="m-4">
+                            
+                            <!--1° LINHA-->
+                            <div class="row">
+                                <!--Data-->
+                                <h3 class="text-center">CAIXA ABERTO</h3>
+                                <!--LADO ESQUERDO-->
+                                <div class="col-md">
+                                    <div class="row">
+                                        <div class="col-md-3"><br>
+                                            <label for="inputcode" class="form-label">Data</label>
+                                            <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                        </div>
+                                        <!--Hora-->
+                                        <div class="col-md-3"><br>
+                                            <label for="inputAbreviada" class="form-label">Hora</label>
+                                            <input type="text" class="form-control italico " id="inputAbreviada" placeholder="19:00:00">
+                                        </div>
+                                        <!--Código-->
+                                        <div class="col-md-2"><br>
+                                            <label for="inputcode" class="form-label">Caixa</label>
+                                            <input type="text" class="form-control" id="inputcode" placeholder="1">
+                                        </div>
+                                        <!--Razão Social-->
+                                        <div class="col-md-4"><br>
+                                            <label for="inputcsosn" class="form-label">Operador</label>
+                                            <select id="inputState" class="form-select " >
+                                                <!--option placeholder="BA"></option-->
+                                                <option value="AC">ADMINISTRADOR</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Consumidor-->
+                                        <div class="col-md"> <br>
+                                            <label for="inputproduct" class="form-label">Consumidor</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="RECEITAS">
+                                        </div>
+                                        <!--CPF-->
+                                        <div class="col-md-5"><br>
+                                            <label for="inputcsosn" class="form-label">CPF</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="CPF">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!--Produto-->
+                                        <div class="col-md-3"> <br>
+                                            <label for="inputproduct" class="form-label">Produto</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                        <!--Unidade-->
+                                        <div class="col-md-1"><br>
+                                            <label for="inputcsosn" class="form-label">Unid</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                        <!--Quantidade-->
+                                        <div class="col-md"> <br>
+                                            <label for="inputproduct" class="form-label">Quantidade</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                        <div class="col-md-1 pt-lg-4"><br>
+                                            <img src="data:image/png;base64,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" width="25px" alt="">
+                                        </div>
+                                        <!--Preço Unitário-->
+                                        <div class="col-md"><br>
+                                            <label for="inputcsosn" class="form-label">Preço Unitário</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                        <div class="col-md-1 pt-4"><br>
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAABra2utra37+/vv7+/s7Ozn5+d3d3fg4ODNzc1LS0sfHx87OzvU1NSenp4zMzO4uLhBQUGoqKjGxsYYGBiioqJycnKWlpbAwMCHh4cTExPa2toNDQ2QkJA/Pz8tLS37gGfuAAACXUlEQVR4nO3c7XLaMBCFYbsYGwgfNkmgoYTk/q+y2LgznQ7Tf2ePZ/0+d3BGYEkraYsCAAAAAAAAAAAAAAAAAAAAAAAAAAAEajaH1fmH1nl12DSeeMvTsYxyPC3D8zWrsHgP5+CB/Bmcr3cLzLf+MgQsy691VMCNJV9vExPwwxawLD8iAvpGsBcwis2nNeGn/pP6Yg1Yli/qgK/mgGX5qg1YufPdVdKEB3e8u4MyYLV1x7vbKgfxzZ1u8CZMGL3cfm6lC1jt3OEGO93PtHZnG9WyhHt3tNFelnDhjjZayBKe3NFGumXNFOb7nm7O9y9KH3Rj2LmjjTpZwrU72khXr1m6o42ExVP39vdBuQm+uMMNLsKEV3e4wVWYsJjC0nunDDiJ+UI3Vwz8m/ytNqC5HtyT14Td23zhBn9UtdaArbaWOFi+GwO+h5wFN76Iv4IOgmvXrNjqCjT/8nxu9B+Zv2zih7FVFoKf6eLumvSO4pXMU9dbVMj2Jl1s/9e+W6h1uuooAAAAgImoQvYWAeW15663qI3+98WxP8y+x09fpzHV2sL+kLWrsB9VL01f805/bpH/7Cn9+WH+M+D05/j572Kkv0+T/05U/ntt6e8m5r9fmv+O8BTmip5uvsh/V5/3FlF0Y5j/3VP+t2v53x/mf0Nq3+A/KLf5+d9y53+PP4k5X9pTYQZ9MSawrBH3NvFvguX9aYra3GMo4HAmfZ+oGfT6mkG/tqJYx57h/3EM67lX5O+bWMyg92Ux9C8Nmzgc/UsHde4etAAAAAAAAAAAAAAAAAAAAAAAAAAAzNVvPr86V4l+eWAAAAAASUVORK5CYII=" width="50px" alt="">
+                                        </div>
+                                        <!--Total do Ítem-->
+                                        <div class="col-md"> <br>
+                                            <label for="inputproduct" class="form-label">Total do Ítem</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                       
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col">
+                                            <label for="inputproduct" class="form-label">Forma de Pagamento</label>
+                                            <select id="inputState" class="form-select " >
+                                                <!--option placeholder="BA"></option-->
+                                                <option value="AC"></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="inputproduct" class="form-label">Valor das parcelas</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col">
+                                            <label for="inputCor" class="form-label">Tipo de Desconto</label>
+                                            <div class="row mx-2">
+                                                <div class="col-md-4">
+                                                    <label for="pessoaFísica">
+                                                        <input type="radio" id="pessoaFisica" name="tipoPessoa" value="fisica"> $
+                                                    </label>
+                                                </div>
+                                                <div class="col-md">
+                                                    <label for="pessoaJuridica">
+                                                        <input type="radio" id="pessoaJuridica" name="tipoPessoa" value="juridica" checked> %
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputproduct" class="form-label">Valor do Desconto</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputproduct" class="form-label">Valor Pago (R$)</label>
+                                            <input type="text" class="form-control italico" id="imputicms" placeholder="0,00">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Lado Direito-->
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="text-center"><br>
+                                            <h4>Foto não<br>Disponivel</h4><br>
+                                        </div>
+                                        <!--TABELA-->
+                                        <div class="row bg-body ">
+                                            <div class="container container-fluid border border-1">
+                                                <p>==================================</p>
+                                                <p class="text-center ">QUERTY INF <br>ALTO DA BELA VISTA, 19<br>ITUBERÁ - BAHIA - BA<br></p>
+                                                <p>Fone: (73)9 1234-5678 - CNPJ: 12.345.678/9012/45<br>
+                                                ==================================<br>Descrição do Produto<br>Código-----Un------Qtd-----Preç.Unit-----Preç.Total </p>
+                                                <br><br><br><br><br><br>
+                                                <br>
+
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="conteiner container-fluid border border-1">
+                                    <div class="row p-3 bg-body-tertiary">
+                                        <div class="col">
+                                            <div class="col">
+                                                <label for="inputproduct" class="form-label">Ítem</label>
+                                                <input type="text" class="form-control italico text-end branco bg-dark" id="imputicms" placeholder="0,00">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="col">
+                                                <label for="inputproduct" class="form-label">Valor Total dos Produtos</label>
+                                                <input type="text" class="form-control italico text-end branco bg-dark" id="imputicms" placeholder="0,00">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="col">
+                                                <label for="inputproduct" class="form-label">Desconto</label>
+                                                <input type="text" class="form-control italico text-end amarelo bg-dark" id="imputicms" placeholder="0,00">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="col">
+                                                <label for="inputproduct" class="form-label">Valor Total do Pedido</label>
+                                                <input type="text" class="form-control italico text-end branco bg-dark" id="imputicms" placeholder="0,00">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="col">
+                                                <label for="inputproduct" class="form-label">Valor Pago</label>
+                                                <input type="text" class="form-control italico text-end branco bg-dark" id="imputicms" placeholder="0,00">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="col">
+                                                <label for="inputproduct" class="form-label">Troco</label>
+                                                <input type="text" class="form-control italico text-end amarelo bg-dark" id="imputicms" placeholder="0,00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+           
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

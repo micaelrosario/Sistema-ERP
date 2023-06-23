@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fechamento de Caixa</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            
+        </style>
+    </head>
+    <body class="m-4">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success mx-3"><h2>Gerenciamento de NF's</h2></a>
+                <form class="d-flex" role="search">
+                    <button class="btn cancelar subtitle btn-default m-2 px-3" type="submit"><a href="home.html" style="text-decoration: none; color: green">Sair</a></button>
+                    <button class="btn salvar subtitle btn-success  btn-block m-2" type="submit"><a href="sucesso.html" style="text-decoration: none; color: white;">Salvar</a></button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark ">
+                    <form>
+                        <div class="m-4">
+                            <div>
+                                <!--1° LINHA-->
+                                <div class="row subtitle">
+                                    <h6></h6>
+                                    <!--Código-->
+                                    <h4 style="color:rgb(11, 91, 170)"><b>Filtro</b></h4>
+                                    <div class="col-md"><br>
+                                        <div class="row">
+                                            <div class="col pt-1">
+                                                <label for="inputcode" class="form-label">Período</label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" class="form-control" id="inputcode" placeholder="14/06/2023">
+                                            </div>
+                                            <div class="col ">
+                                                <input type="text" class="form-control" id="inputcode" placeholder="14/07/2023">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="form">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                        <div class="form">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                        <div class="form">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                        <div class="form">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                        <div class="form">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form">
+                                            <input class="form-check-input" type="radio" value="" id="flexCheckChecked" checked>
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                        <div class="form">
+                                            <input class="form-check-input" type="radio" value="" id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                              Exibir NF-e's canceladas
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!--TABELA--> <br><hr><br>
+                                <div class="row">
+                                    <div>
+                                        <h4 style="color:rgb(11, 91, 170)"><b>Vendas no Período</b></h4>
+                                        <table class="table table-responsive table-bordered" >
+                                            <thead class="table-bordered border-dark">
+                                                <tr class="table-secondary">
+                                                    <th scope="col">Pedido</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Total Venda</th>
+                                                    <th scope="col">Vlr.Custo</th>
+                                                    <th scope="col">Forma de Pagto.</th>
+                                                    <th scope="col">Vendedor</th>
+                                                    <th scope="col">Valor IPI</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Orçamento</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="">
+                                                <tr class="table-light text-danger">
+                                                    <th scope="row">00001</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>GINNI ROMETTY</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>A VISTA</td>
+                                                    <td>ADMINISTRADOR</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                                <tr class="text-danger">
+                                                    <th scope="row">00002</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>CHENG WEI</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>PARCELADO EM 3X</td>
+                                                    <td>ADMINISTRADOR</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                                <tr class="table-light text-danger">
+                                                    <th scope="row">00003</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>TERRY MYERSON</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>A VISTA</td>
+                                                    <td>FINANCEIRO</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                                <tr class="table-primary text-danger">
+                                                    <th scope="row">00004</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>BILL GATES</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>A VISTA</td>
+                                                    <td>ADMINISTRADOR</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                                <tr class="table-light text-danger">
+                                                    <th scope="row">00005</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>JEFF BEZOS</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>PARCELADO EM 2X</td>
+                                                    <td>FINANCEIRO</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                                <tr class="text-danger">
+                                                    <th scope="row">00006</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>ELON MUSK</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>A VISTA</td>
+                                                    <td>ADMINISTRADOR</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                                <tr class="table-light text-danger">
+                                                    <th scope="row">00007</th>
+                                                    <td>14/06/2023</td>
+                                                    <td>STEVE JOBS</td>
+                                                    <td>50,00</td>
+                                                    <td>10,00</td>
+                                                    <td>A VISTA</td>
+                                                    <td>ADMINISTRADOR</td>
+                                                    <td>0.00</td>
+                                                    <td>AGUARDANFO ENTREGA</td>
+                                                    <td>0000000000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-md-3 me-4">
+                                        <h4 style="color:rgb(11, 91, 170)"><b>Condições de pagamento</b></h4>
+                                        <div class="conteiner border border-1">
+                                            <table class="table table-bordered">
+                                                <thead class="table-bordered border-dark">
+                                                    <tr class="bg-body-tertiary">
+                                                        <th>Forma de pagamento</th>
+                                                        <th>Valor Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="col">10 X</td>
+                                                        <td scope="col">499.52</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">20 DIAS</td>
+                                                        <td scope="col">1.332,00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">A VISTA</td>
+                                                        <td scope="col">21.923,80</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">PARCELADO EM 3X</td>
+                                                        <td scope="col">0,00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col"><h5>TOTAL</h5></td>
+                                                        <td scope="col" style="color:rgb(11, 91, 170)"><b>23.755,32</b></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <h4 style="color:rgb(11, 91, 170)"><b>Vendedores</b></h4>
+                                        <div class="conteiner border border-1">
+                                            <table class="table table-bordered">
+                                                <thead class="table-bordered border-dark">
+                                                    <tr class="bg-body-tertiary">
+                                                        <th>Código</th>
+                                                        <th>Nome do Vendedor</th>
+                                                        <th>Qtd.Pedidos</th>
+                                                        <th>Ítens</th>
+                                                        <th>Vlr.Total Pedidos</th>
+                                                        <th>Vlr.Total Comissão</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="col">00001</td>
+                                                        <td scope="col">JHON SILVA (0,00%)</td>
+                                                        <td scope="col">12</td>
+                                                        <td scope="col">30.000</td>
+                                                        <td scope="col">4.576,98</td>
+                                                        <td scope="col">0,00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">00002</td>
+                                                        <td scope="col">ELON MUSK (0,00%)</td>
+                                                        <td scope="col">1</td>
+                                                        <td scope="col">50.000</td>
+                                                        <td scope="col">400.576,98</td>
+                                                        <td scope="col">0,00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">00003</td>
+                                                        <td scope="col">BILL GATES (10,00%)</td>
+                                                        <td scope="col">4</td>
+                                                        <td scope="col">800.000</td>
+                                                        <td scope="col">99.976,98</td>
+                                                        <td scope="col">1.345,00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">00004</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="col">00005</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="col-md">
+                                            <h4 style="color:rgb(11, 91, 170)"><b>Vendas Relacionadas - Produtos</b></h4>
+                                            <div class="conteiner border border-1">
+                                                <table class="table table-bordered">
+                                                    <thead class="table-bordered border-dark">
+                                                        <tr class="bg-body-secondary">
+                                                            <th>Pedido</th>
+                                                            <th>Data</th>
+                                                            <th>Cliente</th>
+                                                            <th>Produto</th>
+                                                            <th>Qtde.</th>
+                                                            <th>Vlr.Total</th>
+                                                            <th>Ítens</th>
+                                                            <th>Vlr.Total Pedidos</th>
+                                                            <th>Vlr.Total Comissão</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="bg-body-tertiary">
+                                                            <td scope="col">1</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="col">2</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="bg-body-tertiary">
+                                                            <td scope="col">3</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td scope="col">4</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="bg-body-tertiary">
+                                                            <td scope="col">5</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

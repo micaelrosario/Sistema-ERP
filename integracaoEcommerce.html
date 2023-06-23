@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IntegraçãoeCommerce</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            
+        </style>
+    </head>
+    <body class="m-4">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+            <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-success mx-4"><h2>Integração eCommerce</h2></a>
+                    <form class="d-flex" role="search">
+                        <a href="home.html">
+                            <button type="button" class="btn-close me-4" style="font-size: 40px;" aria-label="Close"></button>
+                        </a> 
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--INTEGRAÇÕES-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark ">
+                    <form>
+                        <h3 class="pt-4 pb-2 m-2">Adicionar integração</h6>
+                        <div class="row">
+                            <div class="col-md">
+                                <input class="form-control mx-1 border border-success" type="search" placeholder="Pesquise por integrações ou canais de venda" aria-label="Search">
+                            </div>
+                            <div class="col-md">
+                                <button class="btn btn-success" type="submit">Pesquisar</button>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row mx-5  pt-5">
+                            <div class="col"><button type="button" class="btn btn-primary btn-op btn-sm rounded-5 w-75">todas as integrações</button></div>
+                            <div class="col"><button type="button" class="btn btn-secondary btn-sm rounded-5 w-75">marketplaces e hubs</button></div>
+                            <div class="col"><button type="button" class="btn btn-secondary btn-sm rounded-5 w-75">plataformas de e-commerce</button></div>
+                            <div class="col"><button type="button" class="btn btn-secondary btn-sm rounded-5 w-75">outras integrações</button></div>
+                        </div><br>
+                        <div class="row pt-4 m-2 ">
+                            <div class="col"><h5>MarketPlaces e Hubs</h5></div>
+                            <p class="">Marketplaces funcionam como um shopping online, onde as empresas podem anunciar seus
+                            produtos em lojas conhecidas<br>  e abrir novos canais de venda com maior visibilidade, enquanto 
+                            hubs são conectores que ligam o Tiny com marketplaces ainda <br>não integrados de forma nativa.</p><br>    
+                        </div>
+                        <div class="row mb-4 mx-2">
+                            <!--Mercado Livre-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="data:image/png;base64,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" width="100px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>Mercado Livre</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--SHOPEE-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbSiH5wpF7a7EvdiLyP96HuKe1B-fYRuabww&usqp=CAU" width="100px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>Shopee</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Americanas MarketPlace-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2 p-3 mx-1">
+                                            <img src="data:image/png;base64,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" width="70px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>Americanas Merketplace</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4 mx-2">
+                            <!--Magalu Marketplace-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2 py-3 ms-2">
+                                            <img src="data:image/jpeg;base64,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" width="80px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-4">
+                                                <h5><b>Magalu Marketplace</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Olist-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAG1BMVEX///8MKdArRdbByPPi5vlcb9+CkeedqewbNtOZx5VwAAADFUlEQVR4nO2a6XrqIBQADWve/4mvxrAdUMj9CrXtzL9oAwzL4YC93QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgj6K2E308mvC4fXO7LoPIp4HIp4HIE30ysYWDCJGbDYy9vj9fVvMaOIoUuUYYwB8von+LiPstIva3iKifJmK0e0QyJ+JsDNaLRLS36o513lTfyX1EBfL3jxn0jLQqlKEffxR3nfCWn2dh3L4lrKypvyFquxUod6jorYVbo3G0o5wdXREvCzgn0loRo3qV9URMowC7XMQ3K9tUtlQ6Iq2eUMun1guPwqQj0iri2diFIu2qDlJK2BGJX+/Oe3c8qXelzxBpro+qwo5IeDrH8BHBzrhnnHMxnu3uZEY+X0TNXdnSK9T4XiR2exT3xQYTPSe0P5CHG6vPRmQf/adIwRKRNCDZzuHih2FIBkX2OidYJJJalAfbzMSNiMQ1su2t5GOFSIqbZV+m9Tkkki20Rh61QiS2QB6+Y8ZhRkSKfURZMcFWiKjQYDm5o6EfEbmJjNEW8XWFSPDY5RdxlYyJVLtRPiorRF7NLBlRu9lvZZIt+5UiVRVXRe5jKFV8VdZ3TK24fIdF7tmIUAkLZcliD3W8XOx6WORWJgVpvi4NvyK5MDH8XhIRJ169TiTOIJFcOFH3hUtsnUbFrRPJUpT847TB2csiWQCzopJqJX4hWdKYxiTbqIeSxkc52YjG4ZQi1Ur8QrIT3O7SsUg0pSvimv1Qicz8gaRILpS1trjXGTtYHc9xB0xTy8m3D1szR8fUF1KJ0aPuszeU18bkV2Shxdn8tfae3s2ZYS8vUfJl816kdau1ZfFDVjHpWss1W7FduA56cX+Rsi0x6u2D5DST4Qu6FxcxWb/LIZl1ia1bLSmOR52pZXvvy/PKJJFGS8Thuxd+fdUV7m0F8+JwWZOSy7F/HilS312edkvVsGNNwrvHHrIr6+v+Cr/462cLjG78C4B2x+2euhfQbKd/fH0vfso9IwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwEfzDxn7EjXv0SvIAAAAAElFTkSuQmCC" width="110px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>Olist</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Via Marketplace-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2 p-4 mx-1">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ydW16jkJ18R6jiGfwRoX8vQ3KFvyi5Zvwg&usqp=CAU" width="80px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>Via Marketplace</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4 mx-2">
+                            <!--Amazon-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2 py-3 ms-2">
+                                            <img src="data:image/png;base64,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" width="70px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-4">
+                                                <h5><b>Amazon</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--AliExpress-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2 pt-3 ms-2">
+                                            <img src="data:image/png;base64,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" width="70px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>AliExpress</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Olx-->
+                            <div class="col">
+                                <div class="container border border-1">
+                                    <div class="row">
+                                        <div class="col-2 p-4 mx-1">
+                                            <img src="data:image/png;base64,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" width="70px" alt="Shopee">
+                                        </div>
+                                        <div class="col">
+                                            <div class="mt-2 pt-2 ms-5">
+                                                <h5><b>Olx</b></h5>
+                                                <p>Marketplace</p>
+                                                <div class="pb-2 text-end m-1">
+                                                    <button type="button" class="btn btn-success btn-sm rounded-3">Instalar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </table>
+            </div>
+            <!--=====================Integrações===================-->
+           
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

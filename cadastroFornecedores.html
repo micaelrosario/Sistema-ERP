@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--===================CABEÇALHO===================-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Fornecedores</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--==========ESTILO DO CSS========-->
+        <style>
+            .navbar-border{
+                border-bottom: 1px solid rgb(236, 236, 236);
+            }
+            .input-lg{
+                height: 150px;
+                font-size: 10px;
+            }
+            .subtitle{
+                font-family: verdana;
+            }
+            .cancelar{
+                color: rgb(2, 151, 39);
+                background-color: white;
+                border-color: rgb(2, 151, 39);
+            }
+            .salvar{
+                color:white;
+                background-color: rgb(2, 151, 39);
+            }
+            .sombra{
+                box-shadow: 0 2px 4px rgba(139, 139, 139, 0.1);
+            }
+            .textarea{
+                color: rgb(1, 53, 112)
+            }
+            textarea{
+                border-color:rgb(224, 221, 221, 0.7)
+            }
+            .negrito::placeholder{
+                font-weight: bold;
+            }
+            .italico::placeholder{
+                font-style: italic;
+            }
+            
+        </style>
+    </head>
+    <body class="m-4">
+        <!--==============BARRA DE NAVEGAÇÃO==============--> 
+        <div>
+        <nav class="navbar fixed-top navbar-expand bg-body navbar-border sombra">
+            <div class="container-fluid">
+                <a class="navbar-brand text-success"><h2>Cadastro de Fornecedores</h2></a>
+                <form class="d-flex" role="search">
+                    <button class="btn cancelar subtitle btn-default m-2" type="submit"><a href="home.html" style="text-decoration: none; color: green">Cancelar</a></button>
+                    <button class="btn salvar subtitle btn-success  btn-block m-2" type="submit"><a href="sucesso.html" style="text-decoration: none; color: white;">Cadastrar</a></button>
+                </form>
+            </div>
+        </nav>
+        <br>
+        </div><br><br>
+        <!--====================FÓRMULARIO================-->
+        <div>
+            <!--DADOS DA EMPRESA-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark">
+                    <form>
+                        <div class="m-4">
+                            <div>
+                                <!--1° LINHA-->
+                                <div class="row">
+                                    <h6></h6>
+                                    <!--Código-->
+                                    <h3>Dados do Fornecedor</h3>
+                                    <div class="col-md-2"><br>
+                                        <label for="inputcode" class="form-label">Código</label>
+                                        <input type="text" class="form-control text-start" id="inputcode" placeholder="000100">
+                                    </div>
+                                    <!--Razão Social-->
+                                    <div class="col-md-6"><br>
+                                        <label for="inputAbreviada" class="form-label">Nome/Razão Social</label>
+                                        <input type="text" class="form-control italico" id="inputAbreviada" placeholder="Fornecedor Teste">
+                                    </div>
+                                    <!--Profissão-->
+                                    <div class="col-md-4"><br>
+                                        <label for="inputcsosn" class="form-label">Profissão</label>
+                                        <select id="inputState" class="form-select " >
+                                            <option value="advogado">Advogado</option>
+                                            <option value="medico">Médico</option>
+                                            <option value="engenheiro">Engenheiro</option>
+                                            <option value="professor">Professor</option>
+                                            <option value="arquiteto">Arquiteto</option>
+                                            <option value="enfermeiro">Enfermeiro</option>
+                                            <option value="programador">Programador</option>
+                                            <option value="contador">Contador</option>
+                                            <option value="psicologo">Psicólogo</option>
+                                            <option value="dentista">Dentista</option>
+                                            <option value="farmaceutico">Farmacêutico</option>
+                                            <option value="veterinario">Veterinário</option>
+                                            <option value="designer">Designer</option>
+                                            <option value="administrador">Administrador</option>
+                                            <option value="economista">Economista</option>
+                                            <option value="nutricionista">Nutricionista</option>
+                                            <option value="fisioterapeuta">Fisioterapeuta</option>
+                                            <option value="jornalista">Jornalista</option>
+                                            <option value="psiquiatra">Psiquiatra</option>
+                                            <option value="odontologo">Odontólogo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <!--2° LINHA-->
+                                <div class="row subtitle">
+                                    <!--Nome Fantasia-->
+                                    <div class="col-md-4 py-4">
+                                        <label for="inputOriginal" class="form-label">Nome Fantasia</label>
+                                        <input type="text" class="form-control italico" id="inputNatureza" placeholder="Fornecedor">
+                                    </div>
+                                    <!---TIPO DE PESSOA-->
+                                    <div class="col-md-2 py-4"> 
+                                        <label for="inputCor" class="form-label">Tipo de pessoa</label>
+                                        <div class="row ">
+                                            <div class="col-md-4 ">
+                                                <label for="pessoaFísica">
+                                                    <input type="radio" id="pessoaFisica" name="tipoPessoa" value="fisica" checked> Física
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="pessoaJuridica">
+                                                    <input type="radio" id="pessoaJuridica" name="tipoPessoa" value="juridica" > Jurídica
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--CNPJ-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputproduct" class="form-label">CPF</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="201.345.564-11">
+                                    </div>
+                                    <!--Inscrição Estadual-->
+                                    <div class="col-md"><br>
+                                        <label for="inputicms" class="form-label">Inscrição Estadual</label>
+                                        <input type="text" class="form-control italico" id="imputicms" placeholder="Inscrição Estadual">
+                                    </div>
+                                     <!--CEP-->
+                                     <div class="col-md-2"><br>
+                                        <label for="inputcsosn" class="form-label">CEP</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="11045-001">
+                                    </div>
+                                </div>
+                                <!--4° LINHA-->
+                                <div class="row">
+                                    <!--Endereço-->
+                                    <div class="col-md-7 px-md-">
+                                        <label for="inputcstpis" class="form-label">Endereço (Logradouro + Número)</label>
+                                        <input type="text" class="form-control italico" id="imputcstpis" placeholder="Nome da rua e número da casa">
+                                    </div>
+                                    <!--Complemento-->
+                                    <div class="col-md-5">
+                                        <label for="inputcstcofins" class="form-label">Complemento</label>
+                                        <input type="text" class="form-control italico" id="imputcstcofins" placeholder="Complemento...">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!--BAIRRO-->
+                                    <div class="col-md"><br>
+                                        <label for="inputipi" class="form-label">Bairro</label>
+                                        <input type="text" class="form-control italico" id="imputipi" placeholder="Bairro">
+                                    </div>
+                                    <!--País-->
+                                    <div class="col-md-2"><br>
+                                        <label for="inputcsosn" class="form-label">País</label>
+                                        <select id="inpuPais" class="form-select " >
+                                            <option value="BR">Brasil</option>
+                                            <option value="CN">China</option>
+                                            <option value="IN">Índia</option>
+                                            <option value="US">Estados Unidos</option>
+                                            <option value="ID">Indonésia</option>
+                                            <option value="PK">Paquistão</option>
+                                            <option value="NG">Nigéria</option>
+                                            <option value="BD">Bangladesh</option>
+                                            <option value="RU">Rússia</option>
+                                            <option value="MX">México</option>
+                                            <option value="JP">Japão</option>
+                                            <option value="ET">Etiópia</option>
+                                            <option value="PH">Filipinas</option>
+                                            <option value="EG">Egito</option>
+                                            <option value="CD">República Democrática do Congo</option>
+                                        </select>
+                                    </div>
+                                    <!--UF-->
+                                    <div class="col-md-1"><br>
+                                        <label for="inputcsosn" class="form-label">UF</label>
+                                        <select id="inputState" class="form-select " >
+                                            <!--option placeholder="BA"></option-->
+                                            <option value="AC">AC - Acre</option>
+                                            <option value="AL">AL - Alagoas</option>
+                                            <option value="AP">AP - Amapá</option>
+                                            <option value="AM">AM - Amazonas</option>
+                                            <option value="BA">BA - Bahia</option>
+                                            <option value="CE">CE - Ceará</option>
+                                            <option value="DF">DF - Distrito Federal</option>
+                                            <option value="ES">ES - Espírito Santo</option>
+                                            <option value="GO">GO - Goiás</option>
+                                            <option value="MA">MA - Maranhão</option>
+                                            <option value="MT">MT - Mato Grosso</option>
+                                            <option value="MS">MS - Mato Grosso do Sul</option>
+                                            <option value="MG">MG - Minas Gerais</option>
+                                            <option value="PA">PA - Pará</option>
+                                            <option value="PB">PB - Paraíba</option>
+                                            <option value="PR">PR - Paraná</option>
+                                            <option value="PE">PE - Pernambuco</option>
+                                            <option value="PI">PI - Piauí</option>
+                                            <option value="RJ">RJ - Rio de Janeiro</option>
+                                            <option value="RN">RN - Rio Grande do Norte</option>
+                                            <option value="RS">RS - Rio Grande do Sul</option>
+                                            <option value="RO">RO - Rondônia</option>
+                                            <option value="RR">RR - Roraima</option>
+                                            <option value="SC">SC - Santa Catarina</option>
+                                            <option value="SP">SP - São Paulo</option>
+                                            <option value="SE">SE - Sergipe</option>
+                                            <option value="TO">TO - Tocantins</option>
+                                        </select>
+                                    </div>
+                                    <!--CIDADE-->
+                                    <div class="col-md"><br>
+                                        <label for="inputipi" class="form-label">Cidade</label>
+                                        <input type="text" class="form-control italico" id="imputipi" placeholder="Cidade">
+                                    </div>
+                                    <!--TELEFONE-->
+                                    <div class="col-md-2"><br>
+                                        <label for="inputcsosn" class="form-label">Telefone</label>
+                                        <input type="text" class="form-control" id="imputcsosn" placeholder="(DDD) 9876-5432">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!--FAX-->
+                                    <div class="col-md-2"><br>
+                                        <label for="inputipi" class="form-label">Fax</label>
+                                        <input type="text" class="form-control italico" id="imputipi" placeholder="Fax">
+                                    </div>
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label">Celular</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="Celular">
+                                    </div>
+                                    <!--Email-->
+                                    <div class="col-md-4"><br>
+                                        <label for="inputcsosn" class="form-label">Email</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="sistemaerp@gmail.com">
+                                    </div>
+                                    <!--Site-->
+                                    <div class="col-md-4"><br>
+                                        <label for="inputipi" class="form-label">Site</label>
+                                        <input type="text" class="form-control italico" id="imputipi" placeholder="www.nome.com.br">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!--FAX/CELULAR-->
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label">Plano de contas</label>
+                                        <select id="inpuPais" class="form-select " >
+                                        </select>
+                                    </div>
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label">Condições de pagamentos</label>
+                                        <select id="inpuPais" class="form-select " >
+                                    </div>
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label"></label>
+                                        <select id="inpuPais" class="form-select " >
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!--FAX/CELULAR-->
+                                    <div class="col-md-2"><br>
+                                        <label for="inputcsosn" class="form-label">Comprador</label>
+                                        <select id="inpuPais" class="form-select " >
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4"><br>
+                                        <label for="inputcsosn" class="form-label">Inscrição SUFRAMA</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="">
+                                    </div>
+                                    <!--Observações-->
+                                    <div class="col-md"><br>
+                                        <label for="inputcsosn" class="form-label">Observações</label>
+                                        <input type="text" class="form-control italico" id="imputcsosn" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--Contatos-->
+            <div class="container-fluid border border-1">
+                <table class="table table-dark">
+                    <form>
+                        <div class="m-4">
+                            <div>
+                                <div class="row">
+                                    <h6></h6>
+                                    <!--CRT - Código de Regime Tributário-->
+                                    <h3>Contatos</h3>
+                                    <div class="col-md-1"><br>
+                                        <label for="inputcode" class="form-label">Código</label>
+                                        <input type="text" class="form-control" id="inputcode" placeholder="0010">
+                                    </div>
+                                    <!--IRPJ(%)-->
+                                    <div class="col-md"><br>
+                                        <label for="inputAbreviada" class="form-label">Nome</label>
+                                        <input type="text" class="form-control " id="inputAbreviada" placeholder="">
+                                    </div>
+                                    <!--PIS/PASEP-->
+                                    <div class="col-md py-4">
+                                        <label for="inputOriginal" class="form-label">Departamento</label>
+                                        <input type="text" class="form-control " id="inputNatureza" placeholder="">
+                                    </div>
+                                    <!---CSLL (%)-->
+                                    <div class="col-md"> <br>
+                                        <label for="inputCor" class="form-label">Telefone</label>
+                                        <input type="text" class="form-control" id="imputicms" placeholder="( )         -">
+                                    </div>
+                                    <!--COFINS(%)-->
+                                    <div class="col-md-1"> <br>
+                                        <label for="inputproduct" class="form-label">Ramal</label>
+
+                                        <input type="text" class="form-control" id="imputicms" placeholder="">
+                                    </div>
+                                    <!--INSS(%)-->
+                                    <div class="col-md"><br>
+                                        <label for="inputicms" class="form-label">Email</label>
+                                        <input type="text" class="form-control" id="imputicms" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>  
+                </table>
+            </div>
+            <!--=====================TABELA===================-->
+            <div class="container-fluid table-responsive flex border border-1 ">
+                <table class="table table-bordered text" >
+                    <thead>
+                        <tr class="table-secondary">
+                            <th scope="col">Código</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CNPJ</th>
+                            <th scope="col">Inscrição Estadual</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Bairro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-light">
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="">
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>
